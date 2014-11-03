@@ -84,8 +84,8 @@ Create a module called `EventDispatcher` that allows us to do the following:
 Implement the following functionalities:
 
 ```javascript
-EventDispatcher.on('.klass', 'shadi', function() { console.log("awesome") });
-EventDispatcher.trigger('.klass', 'shadi');
+EventDispatcher.on('.klass', 'fakeEvent', function() { console.log("awesome") });
+EventDispatcher.trigger('.klass', 'fakeEvent');
 // this should print "awesome" in the console.
 ```
 
