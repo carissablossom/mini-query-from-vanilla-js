@@ -79,7 +79,7 @@ DOM.removeClass('.klass', 'shadi')
 
 Create a module called `EventDispatcher` that allows us to do the following:
 
-> Hint: Read about events, [here's a start](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events)
+> Hint: Read about [events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events)
 
 Implement the following functionalities:
 
@@ -118,15 +118,18 @@ Let's namespace all of our tools/libraries into one awesome toolbelt: miniQuery.
 miniQuery('.klass')
 miniQuery('#eyed')
 miniQuery('a')
+
 // DOM manipulation
 miniQuery('.klass').hide();
 miniQuery('.klass').show();
 miniQuery('.klass').addClass();
 miniQuery('.klass').removeClass();
-// Event Dispatch
+
+// Event Dispatching
 miniQuery('.klass').on('shadi', function() { console.log("awesome") });
 miniQuery('.klass').trigger('shadi');
-// ajax
+
+// AJAX
 miniQuery.ajax({
  url: 'someurl',
  type: 'GET',
@@ -139,19 +142,22 @@ miniQuery.ajax({
 });
 ```
 
-- Start by creating a miniQuery module and move everything under it. So you'll have a somthing like:
+- Start by creating a `miniQuery` module and move everything under it. You'll have a something like:
+
 ```javascript
 miniQuery.DOM.hide('.klass');
 miniQuery.AjaxWrapper.request({...});
 ```
-- Then move the selectors so they work directly from miniQuery('...'). Don't move all of the functions straight under miniQuery module, think of a clean way to use them under the hood.
-- Continue with the rest of the libraries and make sure you're not repeating yourself. Meaning, can the libraries use each other?
-- Take small steps, don't attempt to solve this all at once.
 
-###Release 5: use $
-miniQuery is too long to write, can we use $ as well. Nothing should change, we'll just give the user the option to use miniQuery() or $().
+- Move the selectors so they work directly from the `miniQuery` namespace. Don't move all of the functions straight under miniQuery module, think of a clean way to use them under the hood.
+- Continue with the rest of the libraries and make sure you're not repeating yourself. Can the libraries use each other?
+- Take small steps! Don't attempt to solve this all at once.
 
-###Dive Deeper
+##### Release 5: Use $
+
+`miniQuery` is too long to write; can we use `$` as well? Nothing should change, we'll just give the user the option to use `miniQuery` or `$`.
+
+##### Dive Deeper
 - [Bonzo](https://github.com/ded/bonzo)
 - [reqwest](https://github.com/ded/reqwest)
 - [Bean](https://github.com/fat/bean)
