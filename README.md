@@ -1,14 +1,14 @@
-# miniQuery challenge
+# MiniQuery Challenge
 
-##Learning Competencies
-- Create modular code in Javascript.
-- Implement css selector library in Javascript.
-- Implement DOM manipulation library in Javascript.
-- Implement event dispatch library in Javascript.
-- Implement http requests library in Javascript.
-- Understand and reimplement jQuery as a toolbelt that collects various libraries.
+### Learning Competencies
+- Create modular code in Javascript
+- Implement a CSS selector library in Javascript
+- Implement a DOM manipulation library in Javascript
+- Implement an event dispatch library in Javascript
+- Implement an http requests library in Javascript
+- Understand and reimplement jQuery as a toolbelt of various individual libraries
 
-##Summary
+## Summary
 [jQuery](http://jquery.com/) is a very popular Javascript toolbelt. It is a collection of tools, each tool allows you to do a very specific job, for example:
 
   - Select elements with css: $('#id'), $('.class'), $('element')
