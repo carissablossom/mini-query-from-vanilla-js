@@ -23,49 +23,55 @@ In this challenge we will decompose jQuery and reimplement some of its functiona
 ### Setting up the Application
 In the repo, you'll find an `index.html` file and a `lib` folder. The `index.html` is very simple - it primarily links to our miniQuery library and allows us to test it easily. The `lib` folder contains `miniQuery.js`; this is where you'll be spending most of your time. You are **NOT** allowed to include jQuery or any other external library. This would defeat the purpose of this challenge! You are, however, encouraged to read the jQuery code and get inspired. You will be using the browser dev tools console to test your code.
 
-Read [Module Pattern chapter of Javascript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)
+Read the ["module pattern" chapter of Javascript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)
 
-##Releases
-###Release 0: A selector library
-Create a module called SweetSelector that allows us to do the following (hint: you need to do it in [pure javascript](http://www.w3schools.com/js/js_htmldom_elements.asp) ):
+### Releases
+
+##### Release 0: A CSS selector library
+
+Create a module called `SweetSelector` that allows us to do the following (hint: you need to do it in [pure javascript](http://www.w3schools.com/js/js_htmldom_elements.asp) ):
 
 - select by id:
 ```javascript
+SweetSelector.select('#eyed');
 // should return <div id="eyed">eyed</div>
-SweetSelector.select('#eyed')
 ```
+
 - select by class:
 ```javascript
+SweetSelector.select('.klass');
 // should return <div class="klass">klass</div>
-SweetSelector.select('.klass')
 ```
+
 - select by tag name:
 ```javascript
+SweetSelector.select('a');
 // should return <a href="#hello">click me</a>
-SweetSelector.select('a')
 ```
 
+##### Release 1: DOM manipulation
 
-###Release 1: DOM manipulation
-
-Create a module called DOM that allows us to do the following:
-
-Hint: What does hide actually do? Try it in jQuery, hide an element and inspect it. See anything different? Styling maybe?
+Create a module called `DOM` that allows us to do the following:
 
 - hide and show elements:
 ```javascript
 DOM.hide('.klass') // hides the div
 DOM.show('.klass') // shows the div
 ```
+
+> Hint: What does hide actually do? Try it in jQuery, hide an element and inspect it. See anything different? Styling maybe?
+
 - addClass and removeClass elements:
 ```javascript
-// div.klass should look like this: <div class="klass shadi">klass</div>
 DOM.addClass('.klass', 'shadi')
-// div.klass should look like this: <div class="klass">klass</div>
+// div.klass should look like this: <div class="klass shadi">klass</div>
+
 DOM.removeClass('.klass', 'shadi')
+// div.klass should look like this: <div class="klass">klass</div>
 ```
 
-###Release 2:  Event dispatch
+##### Release 2:  Event dispatching
+
 Create a module called EventDispatcher that allows us to do the following:
 
 Hints:
