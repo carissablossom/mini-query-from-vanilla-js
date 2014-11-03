@@ -45,13 +45,13 @@ SweetSelector.select('#eyed');
 - select by `class`:
 ```javascript
 SweetSelector.select('.klass');
-// should return <div class="klass">klass</div>
+// should return [<div class="klass">klass</div>, <div class="klass">klass</div>]
 ```
 
 - select by `tag name`:
 ```javascript
 SweetSelector.select('a');
-// should return <a href="#hello">click me</a>
+// should return [<a href="#hello">click me</a>, <a href="#hello">click me</a>]
 ```
 
 ##### Release 1: DOM manipulation
