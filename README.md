@@ -84,7 +84,7 @@ Create a module called `EventDispatcher` that allows us to do the following:
 Implement the following functionalities:
 
 ```javascript
-EventDispatcher.on('.klass', 'fakeEvent', function() { console.log("awesome") });
+EventDispatcher.on('.klass', 'fakeEvent', function() { console.log('awesome') });
 EventDispatcher.trigger('.klass', 'fakeEvent');
 // this should print "awesome" in the console.
 ```
@@ -122,12 +122,12 @@ miniQuery('a')
 // DOM manipulation
 miniQuery('.klass').hide();
 miniQuery('.klass').show();
-miniQuery('.klass').addClass();
-miniQuery('.klass').removeClass();
+miniQuery('.klass').addClass('shadi');
+miniQuery('.klass').removeClass('shadi');
 
 // Event Dispatching
-miniQuery('.klass').on('shadi', function() { console.log("awesome") });
-miniQuery('.klass').trigger('shadi');
+miniQuery('.klass').on('fakeEvent', function() { console.log('awesome') });
+miniQuery('.klass').trigger('fakeEvent');
 
 // AJAX
 miniQuery.ajax({
