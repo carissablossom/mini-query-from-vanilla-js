@@ -45,6 +45,7 @@ SweetSelector.select('.klass')
 SweetSelector.select('a')
 ```
 
+**Important**:  You _should not_ use `document.querySelector*` methods.  Try to go as punk rock as possible: DIY with the lowest-level tools you can find.  As a **Bonus** feel free to add a `querySelector` or `querySelectorAll` of your own design to the `SweetSeelctor` namespace.
 
 ###Release 1: DOM manipulation
 
