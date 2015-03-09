@@ -93,19 +93,19 @@ EventDispatcher.trigger('.klass', 'fakeEvent');
 
 Create a module called `AjaxWrapper` that allows us to do the following:
 
-> Hint: Use [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+Hints: 
+  * [using XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+  * [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ```javascript
 // this should an ajax request to the url and call the success callback if successful and fail callback if unsuccessful.
 AjaxWrapper.request({
  url: 'someurl',
- type: 'GET',
- success: function() {
-   //do something
- },
- fail: function() {
-  //do something
- }
+ type: 'GET'
+}).then(function(data, textStatus, xhr) {
+  // Handle data returned from the Promise
+}).fail(function(errorMessage, textStatus, xhr) {
+  // Handle data returned from the Promise
 });
 ```
 
